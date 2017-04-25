@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itvo.acuacultura.View.Alimentacion.GraficaAlimentacionActivity"
+    >
+
+    <include layout="@layout/actionbar_toolbar" />
+
+    <LinearLayout
+        android:weightSum="1"
+        android:paddingTop="@dimen/PaddingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para un Kilogramo se Necesita:"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@android:color/background_dark" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/paddingTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblResultados"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/textSizeResGraf"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heihDivider"
+                android:background="@android:color/darker_gray">
+
+            </View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para un Kilogramo de Todas las Mezclas se Necesita"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/textziceAli" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chartAlimentacion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

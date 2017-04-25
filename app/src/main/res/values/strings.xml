@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Acuacultura</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="TituloMain">Calculo de Dietas y Parametros de Crecimiento</string>
+    <string name="Tilapia">Tilapia</string>
+    <string name="Trucha">Trucha</string>
+    <string name="toolbar_title">Menu Principal</string>
+    <string name="menuTitle">Seleccione el Calculo a Realizar</string>
+    <string name="Calidad">Calidad del Agua</string>
+    <string name="alimentacion">Alimentación</string>
+    <string name="Crecimiento">Crecimiento</string>
+    <string name="Enfermedades">Enfermedades</string>
+    <string name="Temperatura">Temperatura</string>
+    <string name="Oxigeno">Oxigeno</string>
+    <string name="PH">PH</string>
+    <string name="Turbidez">Turbidez</string>
+    <string name="Revisar">Revisar</string>
+    <string name="NuevoCalculo">Nuevo Calculo</string>
+    <string name="Registros">Registros</string>
+    <string name="hint_nombre">Valor deseado de la proteina cruda en un alimento</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

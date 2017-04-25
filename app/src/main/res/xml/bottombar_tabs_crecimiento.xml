@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/helpc"
+        title="Ayuda"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/help"
+        />
+    <tab
+        id="@+id/graficar"
+        title="Graficar"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/dates"
+        />
+    <tab
+        id="@+id/calcular"
+        title="Calcular"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/cal"
+        />
+    <tab
+        id="@+id/registro"
+        title="@string/Registros"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/reg"
+        />
+</tabs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/help"
+        title="Ayuda"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/help"
+        />
+    <tab
+        id="@+id/home"
+        title="Calcular"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/cal"
+        />
+    <tab
+        id="@+id/registros"
+        title="@string/Registros"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/reg"
+        />
+</tabs>

@@ -1,0 +1,166 @@
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="itvo.acuacultura.View.CalidadDelAgua.Fragments.HomeCAFragment">
+
+        <include layout="@layout/actionbar_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/txtTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Temperatura"
+                        android:inputType="number|numberDecimal"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        app:errorEnabled="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtReTemperatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TilOxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginCreateAcount"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/txtOxigeno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Oxigeno"
+                        android:inputType="number|numberDecimal"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorEditTextBlack"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        app:errorEnabled="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtReOxigeno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TilPH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginCreateAcount"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/txtPH"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="PH"
+                        android:inputType="number|numberDecimal"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorEditTextBlack"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        app:errorEnabled="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtRePH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TilTurb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginCreateAcount"
+                    android:textColorHint="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/txtTurbidez"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Turbidez"
+                        android:inputType="number|numberDecimal"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorEditTextBlack"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColorLink="@color/colorPrimary"
+                        app:errorEnabled="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtReTurbidez"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnRevisar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/Revisar"
+                        android:theme="@style/RaisedButtonDark"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <Button
+                        android:id="@+id/btnNuevoCalculo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/NuevoCalculo"
+                        android:theme="@style/RaisedButtonDark"
+                        android:layout_alignBaseline="@+id/btnRevisar"
+                        android:layout_alignBottom="@+id/btnRevisar"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>

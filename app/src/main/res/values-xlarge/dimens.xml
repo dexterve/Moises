@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="DimenPadinHorizontal">32dp</dimen>
+    <dimen name="TituloSize">20dp</dimen>
+    <dimen name="PaddingLayout">65dp</dimen>
+    <dimen name="buttonName">15dp</dimen>
+    <dimen name="TextsizeBottomMenu">14dp</dimen>
+    <dimen name="RelativeMenu">190dp</dimen>
+    <dimen name="marginCreateAcount">10dp</dimen>
+    <dimen name="paddingTop">10dp</dimen>
+    <dimen name="heihDivider">1dp</dimen>
+    <dimen name="activityVerticalMargin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="TituloInstr">16dp</dimen>
+    <dimen name="paddingBottom">30dp</dimen>
+    <dimen name="paddingTopAlimentacion">35dp</dimen>
+    <dimen name="textziceAli">14dp</dimen>
+    <dimen name="textSizeResGraf">20dp</dimen>
+</resources>

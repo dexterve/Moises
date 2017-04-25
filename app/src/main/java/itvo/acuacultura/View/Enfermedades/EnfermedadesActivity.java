@@ -1,0 +1,56 @@
+package itvo.acuacultura.View.Enfermedades;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.MenuItem;
+
+import itvo.acuacultura.R;
+import itvo.acuacultura.View.MenuActivity;
+
+public class EnfermedadesActivity extends AppCompatActivity {
+
+    String re="";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_enfermedades);
+        re = getIntent().getStringExtra("re");
+
+        showToolbar("Enfermedades " + re, true);
+    }
+
+    public void showToolbar(String title, boolean upButton) {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(title);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                Intent intent = new Intent(this, MenuActivity.class);
+                intent.putExtra("re", re);
+                startActivity(intent);
+                //Toast.makeText(this, "Back", Toast.LENGTH_SHORT).show();onBackPressed();
+                return true;
+        }
+        // Toast.makeText(this, "Back", Toast.LENGTH_SHORT).show();
+        return super.onOptionsItemSelected(item);
+
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==4){
+            Intent intent = new Intent(this, MenuActivity.class);
+            intent.putExtra("re", re);
+            startActivity(intent);
+        }
+        //onBackPressed();
+        return super.onKeyDown(keyCode, event);
+    }
+}
