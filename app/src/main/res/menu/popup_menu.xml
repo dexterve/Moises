@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Tilapia"
+            android:title="Tilapia" />
+        <item
+            android:id="@+id/Trucha"
+            android:title="Trucha" />
+        <item
+            android:id="@+id/Alimentacion"
+            android:title="Ayuda" />
+        <item
+            android:id="@+id/navtools"
+            android:title="Herramientas" />
+    </group>
+
+    <item android:title="Comunicacion">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:title="Compartir" />
+            <item
+                android:id="@+id/send"
+                android:title="Enviar" />
+        </menu>
+    </item>
+
+
+</menu>

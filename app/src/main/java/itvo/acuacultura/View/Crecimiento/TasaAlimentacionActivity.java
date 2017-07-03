@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,7 @@ public class TasaAlimentacionActivity extends AppCompatActivity {
 
         re = getIntent().getStringExtra("re");
         num = getIntent().getStringExtra("num");
+        Toast.makeText(this, num+re, Toast.LENGTH_LONG).show();
 
         resultado = (TextView) findViewById(R.id.lblResultado);
         spinner1 = (Spinner) findViewById(R.id.spinner);

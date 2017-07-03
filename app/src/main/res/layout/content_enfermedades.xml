@@ -1,0 +1,31 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".View.Enfermedades.EnfermedadesActivity">
+
+    <!--include layout="@layout/actionbar_toolbar"/-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pictureRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <!--include layout="@layout/cardview_picture"></include-->
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

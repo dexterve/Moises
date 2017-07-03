@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
     tools:context="itvo.acuacultura.View.Crecimiento.Fragments.RegistrosCrecimientoFragment">
 
-    <include layout="@layout/actionbar_toolbar"/>
+    <!--include layout="@layout/actionbar_toolbar"/-->
 
 
     <LinearLayout
@@ -13,8 +14,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:paddingLeft="@dimen/activityVerticalMargin"
-        android:paddingRight="@dimen/activityVerticalMargin">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
 
 
         <android.support.v7.widget.RecyclerView

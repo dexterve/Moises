@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/helpA"
+        title="Ayuda"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/help"
+        />
+    <tab
+        id="@+id/calculoA"
+        title="Calcular"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/cal"
+        />
+</tabs>

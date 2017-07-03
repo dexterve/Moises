@@ -19,6 +19,14 @@
     <dimen name="paddingTopAlimentacion">35dp</dimen>
     <dimen name="textziceAli">14dp</dimen>
     <dimen name="textSizeResGraf">13dp</dimen>
+    <dimen name="heigth_cardView">200dp</dimen>
+    <dimen name="cornerRadiosCardview">4dp</dimen>
+    <dimen name="textsizeuserName">25sp</dimen>
+    <dimen name="firstword_textsize">15sp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="like_card">10dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
 
 
 </resources>

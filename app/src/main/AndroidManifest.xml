@@ -7,8 +7,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity"
+            android:screenOrientation= "portrait">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,54 +18,51 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.MenuActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
             android:name=".View.CalidadDelAgua.CalidadDelAguaActivity"
-            android:parentActivityName=".View.MenuActivity">
+            android:screenOrientation= "portrait">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MenuActivity" />
+                android:name="android.support.PARENT_ACTIVITY" />
         </activity>
-        <activity
-            android:name=".View.Crecimiento.CrecimientoActivity"></activity>
-        <!--activity
+        <activity android:name=".View.Crecimiento.CrecimientoActivity"
+            android:screenOrientation= "portrait"/>
+        <!--
+        activity
             android:name=".View.Crecimiento.CrecimientoActivity"
             android:parentActivityName=".View.MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".View.MenuActivity" />
-        </activity-->
+        </activity
+        -->
         <activity
-            android:name=".View.Enfermedades.EnfermedadesActivity"
-            android:parentActivityName=".View.MenuActivity">
+            android:name=".View.Enfermedades.EnfermedadesActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MenuActivity" />
+                android:name="android.support.PARENT_ACTIVITY" />
         </activity>
         <activity
             android:name=".View.Alimentacion.AlimentacionActivity"
-            android:parentActivityName=".View.MenuActivity">
+            android:screenOrientation= "portrait">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MenuActivity" />
+                android:name="android.support.PARENT_ACTIVITY" />
         </activity>
         <activity
             android:name=".View.Alimentacion.GraficaAlimentacionActivity"
-            android:parentActivityName=".View.MenuActivity">
+            android:screenOrientation= "portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.MenuActivity" />
+                />
         </activity>
-        <activity android:name=".View.Crecimiento.TasaAlimentacionActivity"
-            android:parentActivityName=".View.Alimentacion.AlimentacionActivity">
+        <activity
+            android:name=".View.Crecimiento.TasaAlimentacionActivity"
+            android:parentActivityName=".View.Alimentacion.AlimentacionActivity"
+            android:screenOrientation= "portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".View.Alimentacion.AlimentacionActivity" /></activity>
+                android:value=".View.Alimentacion.AlimentacionActivity" />
+        </activity>
+        <activity android:name=".View.Enfermedades.DescripcionActivity"
+            ></activity>
+        <activity android:name=".View.Enfermedades.ImagenEnfermedadActivity" />
     </application>
 
 </manifest>

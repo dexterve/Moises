@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:id="@+id/activity_lista_detalle"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCrecimiento"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:paddingTop="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/colorAccent"
         android:paddingTop="5dp">
 
         <TextView
@@ -18,7 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Fecha"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
+            android:paddingLeft="2dp"
             android:textSize="@dimen/TextsizeBottomMenu" />
 
         <TableLayout
@@ -34,9 +39,10 @@
                     android:id="@+id/lblPesoProm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/lblLongitudProm"
@@ -44,8 +50,8 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -56,18 +62,19 @@
                     android:id="@+id/lblPesoAumentado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/lbllongitudAumen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@android:color/black"
                     android:paddingLeft="10dp"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -77,31 +84,33 @@
                     android:id="@+id/lblPorcentajePeso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/lblPorcentajeLong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@android:color/black"
                     android:paddingLeft="10dp"
-                    android:textSize="@dimen/TextsizeBottomMenu" />
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+
+
             </TableRow>
 
         </TableLayout>
 
 
     </LinearLayout>
+    <ImageView
+        android:id="@+id/imageViewTrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        card_view:srcCompat="@drawable/ic_delete_black_24dp" />
 
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/heihDivider"
-        android:background="@android:color/darker_gray">
-
-    </View>
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

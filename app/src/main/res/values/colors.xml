@@ -2,8 +2,10 @@
 <resources>
     <color name="colorPrimary">#7b1fa2</color>
     <color name="colorPrimaryDark">#ab47bc</color>
-    <color name="colorAccent">#7b1fa2</color>
+    <color name="colorAccent">#448aff</color>
+    <color name="colorAccentt">#c69ed8</color>
     <color name="backgraudtext_card">#53292929</color>
+    <color name="backgraudtext_card2">#54a529e3</color>
     <color name="colorEditTextWhite">#ffffff</color>
     <color name="colorEditTextBlack">#000000</color>
 </resources>

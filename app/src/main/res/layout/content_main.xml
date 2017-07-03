@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itvo.acuacultura.MainActivity">
+
+    <!--LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/PaddingLayout"
+        android:weightSum="1">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TituloMain"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/TituloSize"/>
+
+            <ImageButton
+                android:id="@+id/btnTilapia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tilapiaformat"
+                android:layout_centerInParent="true"
+                android:onClick="goToMenuTilapia"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:textSize="@dimen/buttonName"
+                android:text="@string/Tilapia"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageButton
+                android:id="@+id/btnTrucha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/truchafor"
+                android:layout_centerInParent="true"
+                android:onClick="goToMenuTrucha"
+                android:theme="@style/RaisedButtonDark"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:textSize="@dimen/buttonName"
+                android:text="@string/Trucha"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+    </LinearLayout-->
+
+
+</android.support.design.widget.CoordinatorLayout>

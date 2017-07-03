@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".View.Enfermedades.DescripcionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsinToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/imageHeader"
+                android:onClick="imagen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/image"
+                app:layout_collapseMode="parallax"
+                android:transitionName="@string/transitionName"
+                />
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+
+            <TextView
+                android:id="@+id/titleEnfermedad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heihDivider"
+                android:background="@android:color/darker_gray">
+
+            </View>
+            <TextView
+                android:id="@+id/TitDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="Descripción"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/lblDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="@dimen/paddingTop"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"/>
+            <TextView
+                android:id="@+id/TitCausas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="Causas de la Enfermedad"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+            <TextView
+                android:id="@+id/lblCausas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="@dimen/paddingTop"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+            <TextView
+                android:id="@+id/Titsignos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="Signos clinicos de la Infección"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+            <TextView
+                android:id="@+id/lblSignos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="@dimen/paddingTop"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+            <TextView
+                android:id="@+id/TitTratamiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="Tratamiento"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+            <TextView
+                android:id="@+id/lblTratamiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="@dimen/paddingTop"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+            <TextView
+                android:id="@+id/Prevencion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="Prevención "
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+            <TextView
+                android:id="@+id/lblPrevencion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="@dimen/paddingTop"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/heart"
+        app:layout_anchor="@+id/appBar"
+        app:layout_anchorGravity="bottom|end"/>
+    <TextView
+        android:id="@+id/UsernameToolbarProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moises"
+        android:textSize="14dp"
+        android:elevation="10dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="-100dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:alpha="0"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/appBarProfile"
+        app:dependType="y"
+        app:dependTargetY="-250dp"
+        app:targetY="-5dp"
+        app:targetWidth="40dp"
+        app:targetHeight="40dp"
+        app:targetAlpha="1"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -33,8 +31,8 @@ public class HomeCrecimientoFragment extends Fragment {
     TextView num;
     int cont=0;
     int n=1;
-    int numRegistros=2;
-    float registro[][] = new float[2][numRegistros];
+    int numRegistros;
+    float registro[][];
     int almacenar=0;
     ArrayList valores = new ArrayList();
     String mensaje;
@@ -44,12 +42,14 @@ public class HomeCrecimientoFragment extends Fragment {
 
 
     public HomeCrecimientoFragment() {
-        // Required empty public constructor
+        // Required empty public constructorz
     }
 
     public void Re(String re, String nume){
         this.re=re;
-        this.nume=nume;
+        numRegistros= Integer.parseInt(nume);
+        registro = new float[2][numRegistros];
+       // Toast.makeText(getContext(), numRegistros+"", Toast.LENGTH_LONG).show();
     }
 
 
@@ -59,10 +59,9 @@ public class HomeCrecimientoFragment extends Fragment {
         // Inflate the layout for this fragment
         view=inflater.inflate(R.layout.fragment_home_crecimiento, container, false);
         vistas(view);
-
         peso.requestFocus();
         num.setText("Registro: 1");
-        showToolbar("Crecimiento", true, view);
+        //showToolbar("Crecimiento", true, view);
         peso.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -100,19 +99,21 @@ public class HomeCrecimientoFragment extends Fragment {
             public void onClick(View v) {
                 validarDatos();
             }
-        });  return view;
+        });
+       // Toast.makeText(getContext(), re, Toast.LENGTH_LONG).show();
+        return view;
     }
 
 
-    public void showToolbar(String title, boolean upButton, View view) {
+    /*public void showToolbar(String title, boolean upButton, View view) {
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
 
+    }*/
 
-    }
-    public void vistas(View view){
+public void vistas(View view){
         peso        =(EditText) view.findViewById(R.id.txtPeso);
         longitud    =(EditText) view.findViewById(R.id.txtLongitud);
         num         =(TextView) view.findViewById(R.id.lblNumTru);
@@ -198,7 +199,7 @@ public class HomeCrecimientoFragment extends Fragment {
                 float CRL=(creLon/creLon1)*100;
 
                 AdminBD db = new AdminBD(getContext(), "AcuaCultura", null, 1);
-                db.AltaCreTrucha(SPeso, SLongitud, crePeso, creLon, CRP, CRL);
+                db.AltaCreTrucha(SPeso, SLongitud, crePeso, creLon, (int)CRP, (int) CRL);
                 almacenar = 1;
                 Toast.makeText(getContext(), "Guardando...", Toast.LENGTH_SHORT).show();
 
@@ -212,7 +213,7 @@ public class HomeCrecimientoFragment extends Fragment {
                 Intent intent = new Intent(getContext(), TasaAlimentacionActivity.class);
                 intent.putStringArrayListExtra("valor", valores);
                 intent.putExtra("re",re);
-                intent.putExtra("num",nume);
+                intent.putExtra("num",String.valueOf(numRegistros));
                 startActivity(intent);
             }
 
@@ -266,7 +267,7 @@ public class HomeCrecimientoFragment extends Fragment {
                 float CRL=(creLon/creLon1)*100;
 
                 AdminBD db = new AdminBD(getContext(), "AcuaCultura", null, 1);
-                db.AltaCreTilapia(SPeso, SLongitud, crePeso, creLon, CRP, CRL);
+                db.AltaCreTilapia(SPeso, SLongitud, crePeso, creLon, (int)CRP, (int)CRL);
                 almacenar = 1;
                 Toast.makeText(getContext(), "Guardando...", Toast.LENGTH_SHORT).show();
 
@@ -280,7 +281,7 @@ public class HomeCrecimientoFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), TasaAlimentacionActivity.class);
                 intent.putStringArrayListExtra("valor", valores);
                 intent.putExtra("re",re);
-                intent.putExtra("num",nume);
+                intent.putExtra("num",String.valueOf(numRegistros));
                 startActivity(intent);
             }
 

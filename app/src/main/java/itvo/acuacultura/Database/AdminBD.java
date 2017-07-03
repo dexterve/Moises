@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -47,10 +48,16 @@ public class AdminBD extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
     public void AltaRegTrucha(String Temperatura, String PH, String Oxigeno, String Turbidez){
+
+        Date d=new Date();
+        SimpleDateFormat fecc=new SimpleDateFormat("d 'de' MMMM' del' yyyy");
+        String fechacComplString = fecc.format(d);
+
         SQLiteDatabase bd = this.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("Fecha", String.valueOf(new Date()));
+        registro.put("Fecha", fechacComplString);
         registro.put("Temperatura", Temperatura);
         registro.put("PH", PH);
         registro.put("Oxigeno", Oxigeno);
@@ -60,7 +67,12 @@ public class AdminBD extends SQLiteOpenHelper {
     public void AltaRegTilapia(String Temperatura, String PH, String Oxigeno, String Turbidez){
         SQLiteDatabase bd = this.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("Fecha", String.valueOf(new Date()));
+
+        Date d=new Date();
+        SimpleDateFormat fecc=new SimpleDateFormat("d 'de' MMMM' del' yyyy");
+        String fechacComplString = fecc.format(d);
+
+        registro.put("Fecha", fechacComplString);
         registro.put("Temperatura", Temperatura);
         registro.put("PH", PH);
         registro.put("Oxigeno", Oxigeno);
@@ -68,10 +80,15 @@ public class AdminBD extends SQLiteOpenHelper {
         bd.insert("RegistroTilapia", null, registro);
     }
 
-    public void AltaCreTilapia(float peso, float longitud, float pesoAu, float lonAu, float porPes, float porLon){
+    public void AltaCreTilapia(float peso, float longitud, float pesoAu, float lonAu, int porPes, int porLon){
         SQLiteDatabase bd = this.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("Fecha", String.valueOf(new Date()));
+
+        Date d=new Date();
+        SimpleDateFormat fecc=new SimpleDateFormat("d 'de' MMMM' del' yyyy");
+        String fechacComplString = fecc.format(d);
+
+        registro.put("Fecha", fechacComplString);
         registro.put("Peso", peso);
         registro.put("Longitud", longitud);
         registro.put("PesoAumentado", pesoAu);
@@ -80,10 +97,15 @@ public class AdminBD extends SQLiteOpenHelper {
         registro.put("PorcentajeLongitud", porLon);
         bd.insert("CrecimientoTilapia", null, registro);
     }
-    public void AltaCreTrucha(float peso, float longitud, float pesoAu, float lonAu, float porPes, float porLon){
+    public void AltaCreTrucha(float peso, float longitud, float pesoAu, float lonAu, int porPes, int porLon){
         SQLiteDatabase bd = this.getWritableDatabase();
         ContentValues registro = new ContentValues();
-        registro.put("Fecha", String.valueOf(new Date()));
+
+        Date d=new Date();
+        SimpleDateFormat fecc=new SimpleDateFormat("d 'de' MMMM' del' yyyy");
+        String fechacComplString = fecc.format(d);
+
+        registro.put("Fecha", fechacComplString);
         registro.put("Peso", peso);
         registro.put("Longitud", longitud);
         registro.put("PesoAumentado", pesoAu);

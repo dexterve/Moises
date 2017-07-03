@@ -37,7 +37,7 @@ public class GraficaCrecimientoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_grafica_crecimiento, container, false);
         //re = getIntent().getStringExtra("re");
-        showToolbar("Grafica Crecimiento", true, view);
+        //showToolbar("Grafica Crecimiento", true, view);
         Graficar(view);
         return view;
     }

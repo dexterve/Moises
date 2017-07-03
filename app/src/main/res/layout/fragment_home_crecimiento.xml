@@ -5,9 +5,9 @@
     android:id="@+id/activity_crecimiento_tila"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
     tools:context=".View.Crecimiento.Fragments.HomeCrecimientoFragment">
 
-    <include layout="@layout/actionbar_toolbar"/>
     <TextView
         android:id="@+id/lblTit"
         android:layout_width="match_parent"

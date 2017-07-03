@@ -4,9 +4,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize"
         tools:context="itvo.acuacultura.View.CalidadDelAgua.Fragments.HomeCAFragment">
-
-        <include layout="@layout/actionbar_toolbar"/>
 
         <ScrollView
             android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
+import itvo.acuacultura.R;
 import itvo.acuacultura.View.Crecimiento.CrecimientoActivity;
 
 
@@ -23,7 +24,7 @@ public class DialogoListaCrecimiento extends DialogFragment {
         m [2]="30";
 
 
-      AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+      AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.miestilo);
 
         builder.setTitle("Ingrese el Numero de Ejemplares a Evaluar")
                 .setItems(m, new DialogInterface.OnClickListener() {

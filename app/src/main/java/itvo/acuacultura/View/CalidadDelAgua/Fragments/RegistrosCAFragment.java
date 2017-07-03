@@ -3,10 +3,8 @@ package itvo.acuacultura.View.CalidadDelAgua.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +35,7 @@ public class RegistrosCAFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_registros_ca, container, false);
 
-        showToolbar("Registros", true, view);
+       // showToolbar("Registros", true, view);
         RecyclerView picturerecycler=(RecyclerView)view.findViewById(R.id.pictureRecycler);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -62,26 +60,24 @@ public class RegistrosCAFragment extends Fragment {
                 reg = bd.ListarRegTrucha();
                 break;
         }
-
         ArrayList elemento;
         for(int position=0; position<reg.size();position++){
             elemento = (ArrayList) reg.get(position);
-
             registros.add(new ComunicadorRegistrosCA(elemento.get(0).toString(), "Fecha: "+elemento.get(1).toString(),
                     "Temperatura: "+elemento.get(2).toString(),"Oxigeno: "+elemento.get(3).toString(),
-                    "PH: "+elemento.get(4).toString(), "Turbidez: "+elemento.get(5).toString()));
+                    "PH: "+elemento.get(4).toString(), "Turbidez: "+elemento.get(5).toString(),re));
 
         }
 
         return registros;
     }
 
-    public void showToolbar(String title, boolean upButton, View view){
+   /* public void showToolbar(String title, boolean upButton, View view){
         Toolbar toolbar =  (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
-    }
+    }*/
 
     public void Re(String re) {
         this.re=re;

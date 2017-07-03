@@ -16,8 +16,8 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
+import itvo.acuacultura.MainActivity;
 import itvo.acuacultura.R;
-import itvo.acuacultura.View.MenuActivity;
 
 public class GraficaAlimentacionActivity extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class GraficaAlimentacionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grafica_alimentacion);
 
-        showToolbar("Alimentación", true);
+        showToolbar("Resultados Alimentación", true);
 
         PieChart pieChart = (PieChart) findViewById(R.id.chartAlimentacion);
         TextView resultado=(TextView)findViewById(R.id.lblResultados);
@@ -75,8 +75,7 @@ public class GraficaAlimentacionActivity extends AppCompatActivity {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
 
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                intent.putExtra("re",re);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 /*DialogoListaAlimentacion lista = new DialogoListaAlimentacion();
                 lista.Re(re);
@@ -90,8 +89,7 @@ public class GraficaAlimentacionActivity extends AppCompatActivity {
     }
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode==4){
-            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-            intent.putExtra("re",re);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         }
 

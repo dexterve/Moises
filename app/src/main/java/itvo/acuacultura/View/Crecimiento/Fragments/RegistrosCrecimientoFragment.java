@@ -3,10 +3,8 @@ package itvo.acuacultura.View.Crecimiento.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +22,7 @@ import itvo.acuacultura.R;
 public class RegistrosCrecimientoFragment extends Fragment {
 
     String re;
+    private String num;
 
 
     public RegistrosCrecimientoFragment() {
@@ -37,7 +36,7 @@ public class RegistrosCrecimientoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_registros_crecimiento, container, false);
 
-        showToolbar("Registros", true, view);
+       // showToolbar("Registros", true, view);
         RecyclerView picturerecycler=(RecyclerView)view.findViewById(R.id.RegistroCrecimientoRecycler);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -63,13 +62,18 @@ public class RegistrosCrecimientoFragment extends Fragment {
                 reg =  bd.ListarCrecimientoTrucha();
                 break;
         }
+
         for(int position=0; position<reg.size();position++){
             elemento = (ArrayList) reg.get(position);
-
-            registros.add(new ComRegistrosCrecimiento(elemento.get(0).toString(), "Fecha: "+elemento.get(1).toString(), "Peso Promedio: "+
-                    elemento.get(2).toString(),"Longitud Promedio: "+elemento.get(3).toString(),"Peso Aumentado: "+elemento.get(4).toString(),
-                    "Longitud Aumentada: "+elemento.get(5).toString(),elemento.get(6).toString(),elemento.get(7).toString()));
-
+            if(position==0){
+                registros.add(new ComRegistrosCrecimiento(elemento.get(0).toString(), "Fecha: " + elemento.get(1).toString(), "Peso Promedio: " +
+                        elemento.get(2).toString(), "Longitud Promedio: " + elemento.get(3).toString(), "Peso Aumentado: " + elemento.get(4).toString(),
+                        "Longitud Aumentada: " + elemento.get(5).toString(), "0","0",re,num));
+            }else {
+                registros.add(new ComRegistrosCrecimiento(elemento.get(0).toString(), "Fecha: " + elemento.get(1).toString(), "Peso Promedio: " +
+                        elemento.get(2).toString(), "Longitud Promedio: " + elemento.get(3).toString(), "Peso Aumentado: " + elemento.get(4).toString(),
+                        "Longitud Aumentada: " + elemento.get(5).toString(), elemento.get(6).toString(), elemento.get(7).toString(),re,num));
+            }
         }
         //registros.add(new ComunicadorRegistrosCA(reg));
 
@@ -79,14 +83,15 @@ public class RegistrosCrecimientoFragment extends Fragment {
         return registros;
     }
 
-    public void showToolbar(String title, boolean upButton, View view){
+    /*public void showToolbar(String title, boolean upButton, View view){
         Toolbar toolbar =  (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
-    }
+    }*/
 
-    public void Re(String re) {
+    public void Re(String re, String num) {
         this.re=re;
+        this.num=num;
     }
 }

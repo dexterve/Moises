@@ -18,19 +18,21 @@ package itvo.acuacultura.Model;
 
 public class ComunicadorRegistrosCA {
     private String id;
+    private String pez;
     private String fecha;
     private String temperatura;
     private String oxigeno;
     private String PH;
     private String turbiez;
 
-    public ComunicadorRegistrosCA(String id, String Fecha, String temperatura, String oxigeno, String PH, String turbiez) {
+    public ComunicadorRegistrosCA(String id, String Fecha, String temperatura, String oxigeno, String PH, String turbiez, String pez) {
         this.id = id;
         this.fecha=Fecha;
         this.temperatura = temperatura;
         this.oxigeno = oxigeno;
         this.PH = PH;
         this.turbiez=turbiez;
+        this.pez=pez;
     }
 
     public String getId() {
@@ -56,4 +58,9 @@ public class ComunicadorRegistrosCA {
     public String getFecha() {
         return fecha;
     }
+
+    public String getPez() {
+        return pez;
+    }
+
 }

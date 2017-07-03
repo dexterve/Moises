@@ -28,7 +28,7 @@ public class AyudaCrecimientoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_ayuda_crecimiento, container, false);
 
-        showToolbar("Ayuda", true, view);
+        //showToolbar("Ayuda", true, view);
 
         return view;
     }

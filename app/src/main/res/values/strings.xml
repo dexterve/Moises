@@ -18,7 +18,17 @@
     <string name="NuevoCalculo">Nuevo Calculo</string>
     <string name="Registros">Registros</string>
     <string name="hint_nombre">Valor deseado de la proteina cruda en un alimento</string>
+    <string name="transitionName">transitionName</string>
+    <string name="seconDtail">10 Me Gusta</string>
+    <string name="firstWord_card">Hace </string>
+    <string name="time_card"> 4 dias</string>
+    <string name="likeNumberCard">10 Me Gusta</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

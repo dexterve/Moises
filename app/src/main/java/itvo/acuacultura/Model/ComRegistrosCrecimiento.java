@@ -5,9 +5,9 @@ package itvo.acuacultura.Model;
  */
 
 public class ComRegistrosCrecimiento {
-    private String id, fecha, pesoProm, longProm, pesoAu, longAu,porPeso, porLong;
+    private String id, fecha, pesoProm, longProm, pesoAu, longAu,porPeso, porLong, pez, num;
 
-    public ComRegistrosCrecimiento(String id, String fecha, String pesoProm, String longProm, String pesoAu, String longAu, String porPeso, String porLong) {
+    public ComRegistrosCrecimiento(String id, String fecha, String pesoProm, String longProm, String pesoAu, String longAu, String porPeso, String porLong, String pez, String num) {
         this.id = id;
         this.fecha = fecha;
         this.pesoProm = pesoProm;
@@ -16,6 +16,8 @@ public class ComRegistrosCrecimiento {
         this.longAu = longAu;
         this.porPeso = porPeso;
         this.porLong = porLong;
+        this.pez=pez;
+        this.num=num;
     }
 
     public String getId() {
@@ -48,5 +50,14 @@ public class ComRegistrosCrecimiento {
 
     public String getPorLong() {
         return porLong;
+    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public String getPez() {
+        return pez;
+
     }
 }

@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +21,8 @@ import android.widget.Toast;
 import itvo.acuacultura.Database.AdminBD;
 import itvo.acuacultura.Model.CalculoCalidadAgua;
 import itvo.acuacultura.R;
+
+import static android.content.Context.INPUT_METHOD_SERVICE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,7 +50,7 @@ public class HomeCAFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_ca, container, false);
-        showToolbar("Calidad del Agua", true, view);
+        //showToolbar("Calidad del Agua", true, view);
         vistas(view);
         objCAgua = new CalculoCalidadAgua();
         temp.addTextChangedListener(new TextWatcher() {
@@ -119,6 +122,12 @@ public class HomeCAFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 validarDatos();
+                try{
+                    InputMethodManager imm = (InputMethodManager) (getActivity()).getSystemService(INPUT_METHOD_SERVICE);//ocultar teclado
+                    imm.hideSoftInputFromWindow((getActivity()).getCurrentFocus().getWindowToken(), 0);
+                }catch (Exception e){
+
+                }
             }
         });
         nuevo.setOnClickListener(new View.OnClickListener() {
@@ -227,6 +236,7 @@ public class HomeCAFragment extends Fragment {
 
         AdminBD db = new AdminBD(getActivity(), "AcuaCultura", null, 1);
         db.AltaRegTrucha(t, p, o, tu);
+        Toast.makeText(getActivity(),"Guardando...",Toast.LENGTH_SHORT).show();
 
     }
 
@@ -240,8 +250,8 @@ public class HomeCAFragment extends Fragment {
         oxigeno.setText("");
         turbidez.setText("");
         temp.requestFocus();
-        alarma = MediaPlayer.create(getActivity(), R.raw.alarma);
-        bien = MediaPlayer.create(getActivity(), R.raw.good);
+        /*alarma = MediaPlayer.create(getActivity(), R.raw.alarma);
+        bien = MediaPlayer.create(getActivity(), R.raw.good);*/
     }
 
     private void validarDatos() {

@@ -27,7 +27,7 @@ public class HelpCAFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ayuda_ca, container, false);
-        showToolbar("Ayuda", true, view);
+        //showToolbar("Ayuda", true, view);
 
         return view;
     }
