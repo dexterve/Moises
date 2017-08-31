@@ -22,7 +22,7 @@
 
         <item
             android:id="@+id/acerca"
-            android:icon="@drawable/phone"
+
             android:title="Acerca de..." />
     </item>
 
@@ -34,7 +34,7 @@
                 android:title="Compartir" />
             <item
                 android:id="@+id/contacto"
-                android:icon="@drawable/call"
+
                 android:title="Contacto" />
 
 
